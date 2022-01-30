@@ -41,21 +41,10 @@ https://pic16b-minimal-demo.herokuapp.com
 
 This set of lecture notes is based in part on previous materials developed by [Erin George](https://www.math.ucla.edu/~egeo/) (UCLA Mathematics) and the tutorial [here](https://stackabuse.com/deploying-a-flask-application-to-heroku/). 
 '''
+import sqlite3
 
 from flask import Flask, render_template, request
 app = Flask(__name__)
-
-#@app.route("/")
-# simplest possible approach
-# def main():
-#     return "hi there!"
-
-
-# slightly less trivial
-# def main():
-#     return render_template("main.html")
-
-# A little fancier
 
 @app.route("/")
 def main():
@@ -80,3 +69,14 @@ def submit():
 @app.route('/view/')
 def view():
     return "not implemented yet"
+    
+def get_message_db():
+    if g.message_db == True:
+        pass
+    else:
+        g.message_db = sqlite3.connect("messages_db.sqlite")
+    g.message_db.execute('''CREATE TABLE IF NOT EXISTS messages(id INTEGER, handle TEXT, message TEXT)''')
+    return g.message_db()
+    
+def insert_message():
+    return "done"
