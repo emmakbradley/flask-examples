@@ -79,4 +79,5 @@ def get_message_db():
     return g.message_db()
     
 def insert_message():
+
     return "done"
