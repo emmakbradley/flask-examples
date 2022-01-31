@@ -4,5 +4,15 @@
 {% endblock %}
 
 {% block content %}
-Hey there {{m[0][0]}}
+
+{% for message in m %}
+    <tr>
+        <td>{{ message[1] }}</td>
+        <br>
+        <td>- {{ message[2] }}</td>
+        <br>
+        <br>
+    </tr>
+{% endfor %}
+<iframe src="https://giphy.com/embed/G4kXSo1onvYhW" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/video-games-nintendo-animal-crossing-G4kXSo1onvYhW">via GIPHY</a></p>
 {% endblock %}

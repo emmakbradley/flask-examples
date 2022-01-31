@@ -1,7 +1,7 @@
 html {
-    font-family: sans-serif;
+    font-family: American Typewriter, serif;
     background: Pink;
-    padding: 1rem;
+    padding: 4rem;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 
 h1 {
     color: Black;
-    font-family: sans-serif;
+    font-family: American Typewriter, serif;
     margin: 1rem 0;
     text-align: center;
 }
@@ -23,17 +23,20 @@ a {
 
 hr {
     border: none;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid green;
 }
 
 nav {
     background: RGB(105,225,213);
     padding: 0 0.5rem;
     border-radius: 25px;
+    text-align: center;
+    margin: 0 auto;
+
 }
 
 nav ul  {
-    display: flex;
+    display: inline-block;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -48,6 +51,7 @@ nav ul li a {
     padding: 0 1rem 1rem;
     background: violet;
     border-radius: 25px;
+    text-align: center;
 }
 
 .flash {
@@ -56,4 +60,5 @@ nav ul li a {
     padding: 1em;
     background: #cae6f6;
     border: 1px solid #377ba8;
+
 }

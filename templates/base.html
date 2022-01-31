@@ -3,11 +3,11 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>{% block title %}{% endblock %} - blog_post_2</title>
 <nav>
-  <h1>A Simple Message Bank</h1>
+  <h1>♡ Confessions of a PIC 16B Student ♡</h1>
   <!-- <b>Navigation:</b> -->
   <ul>
-    <li><a href="{{ url_for('submit') }}">Submit a message</a></li>
-    <li><a href="{{ url_for('view') }}">View messages here</a></li>
+    <li><a href="{{ url_for('submit') }}">Submit a confession</a></li>
+    <li><a href="{{ url_for('view') }}">View confessions here</a></li>
   </ul>
 </nav>
 
@@ -17,3 +17,5 @@
   </header>
   {% block content %}{% endblock %}
 </section>
+
+
