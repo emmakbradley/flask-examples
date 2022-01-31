@@ -4,19 +4,17 @@
 {% endblock %}
 
 {% block content %}
-  <form method="GET">
+  <form method="POST">
       <label for="message">Your message:</label>
       <br>
       <input type="text" name="message" id="message">
       <br>
-      <label for="name">Your name or handle:</label>
+      <label for="handle">Your name or handle:</label>
       <br>
-      <input type="text" name="handle" id="message">
+      <input type="text" name="handle" id="handle">
       <br>
       <input type="submit" value="Submit message">
   </form>
-{% endblock %}
-
 {% if thanks %}
   Thanks for submitting a message!
 {% endif %}
@@ -24,4 +22,4 @@
 {% if error %}
   Whoops! Looks like something went wrong.
 {% endif %}
-
+{% endblock %}
