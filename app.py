@@ -18,6 +18,7 @@ def get_message_db():
         g.message_db = sqlite3.connect("messages_db.sqlite")
     g.message_db.execute('''CREATE TABLE IF NOT EXISTS messages(id INTEGER, handle TEXT, message TEXT)''')
     return g.message_db
+
 def insert_message(request):
     # connect to db
     g.message_db = get_message_db()
@@ -83,7 +84,7 @@ def submit():
 @app.route('/view/')
 def view():
     messages_list = random_messages(3)
-    return render_template('view.html', m = messages_list)
+    return render_template('view.html', messages_list = messages_list)
     
 
     
