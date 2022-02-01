@@ -81,6 +81,7 @@ def submit():
         except:
             return render_template('submit.hmtl', error=True)
 
+#viewing messages
 @app.route('/view/')
 def view():
     messages_list = random_messages(3)
